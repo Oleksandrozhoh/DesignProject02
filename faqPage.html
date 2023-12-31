@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Accordion Component</title>
+    <style>
+      /*
+      SPACING SYSTEM (px)
+      2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+      FONT SIZE SYSTEM (px)
+      10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+      */
+
+      /* MAIN COLOR: #087f5b #0ca678
+         GREY COLOR: #343a40 */
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      /* ------------------------ */
+      /* GENERAL STYLES */
+      /* ------------------------ */
+      body {
+        font-family: "Inter", sans-serif;
+        line-height: 1;
+      }
+
+      .accordion-header {
+        /* background-color: yellow; */
+        /* color: #087f5b; */
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        align-items: center;
+        justify-content: left;
+        font-weight: 1000;
+        font-size: 25px;
+      }
+
+      svg {
+        font-size: 36px;
+        height: 24px;
+        font-weight: bold;
+      }
+
+      .hidden-box {
+        margin-bottom: 15px;
+        grid-column: 2;
+        display: none;
+      }
+
+      .list-option-text {
+        margin-left: 20px;
+        color: grey;
+      }
+
+      .list {
+        display: flex;
+        gap: 10px;
+        flex-direction: column;
+        grid-column: 2;
+      }
+
+      .full-accordion {
+        box-shadow: 0 0 32px rgba(0, 0, 0, 0.2);
+        width: 700px;
+        padding: 24px;
+
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        column-gap: 24px;
+        row-gap: 32px;
+        align-items: center;
+      }
+
+      .accordions-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        margin-top: 100px;
+      }
+
+      .text {
+        color: black;
+        margin-bottom: 20px;
+      }
+
+      .number {
+        color: gray;
+      }
+
+      .open {
+        border-top: 3px solid #087f5b;
+      }
+
+      .open .hidden-box {
+        display: block;
+      }
+
+      .open .number,
+      .open .question,
+      .open svg {
+        color: #087f5b;
+      }
+
+      .arrow {
+        height: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="index.html" class="FAQ"> Back to main page </a>
+    <div class="accordions-container">
+      <div class="full-accordion">
+        <p class="number accordion-header">02</p>
+        <p class="question accordion-header">
+          Where are these chairs assembled?
+        </p>
+        <svg
+          class="arrow"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="accordion-arrow accordion-header"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="m19.5 8.25-7.5 7.5-7.5-7.5"
+          />
+        </svg>
+
+        <div class="hidden-box">
+          <p class="text">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit
+            voluptatum veritatis, inventore quis modi quia aut iste debitis
+            adipisci eius eaque, accusantium laboriosam necessitatibus quisquam
+            harum illo hic pariatur odio?
+          </p>
+          <ul class="list">
+            <li class="list-option-text">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            </li>
+            <li class="list-option-text">
+              Vitae quod cupiditate ex quibusdam architecto accusamus
+            </li>
+            <li class="list-option-text">
+              aliquam esse, ipsum impedit optio aspernatur
+            </li>
+            <li class="list-option-text">
+              fugit assumenda sapiente deleniti eius cumque et quos cum.
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="full-accordion open">
+        <p class="number accordion-header">02</p>
+        <p class="question accordion-header">
+          How long do I have to reurn my chair?
+        </p>
+        <svg
+          class="arrow"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="accordion-arrow accordion-header"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="m19.5 8.25-7.5 7.5-7.5-7.5"
+          />
+        </svg>
+        <div class="hidden-box">
+          <p class="text">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit
+            voluptatum veritatis, inventore quis modi quia aut iste debitis
+            adipisci eius eaque, accusantium laboriosam necessitatibus quisquam
+            harum illo hic pariatur odio?
+          </p>
+          <ul class="list">
+            <li class="list-option-text">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            </li>
+            <li class="list-option-text">
+              Vitae quod cupiditate ex quibusdam architecto accusamus
+            </li>
+            <li class="list-option-text">
+              aliquam esse, ipsum impedit optio aspernatur
+            </li>
+            <li class="list-option-text">
+              fugit assumenda sapiente deleniti eius cumque et quos cum.
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="full-accordion">
+        <p class="number accordion-header">02</p>
+        <p class="question accordion-header">
+          Do you ship to countries outside the EU?
+        </p>
+        <svg
+          class="arrow"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="accordion-arrow accordion-header"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="m19.5 8.25-7.5 7.5-7.5-7.5"
+          />
+        </svg>
+        <div class="hidden-box">
+          <p class="text">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit
+            voluptatum veritatis, inventore quis modi quia aut iste debitis
+            adipisci eius eaque, accusantium laboriosam necessitatibus quisquam
+            harum illo hic pariatur odio?
+          </p>
+          <ul class="list">
+            <li class="list-option-text">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            </li>
+            <li class="list-option-text">
+              Vitae quod cupiditate ex quibusdam architecto accusamus
+            </li>
+            <li class="list-option-text">
+              aliquam esse, ipsum impedit optio aspernatur
+            </li>
+            <li class="list-option-text">
+              fugit assumenda sapiente deleniti eius cumque et quos cum.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

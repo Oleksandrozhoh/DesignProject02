@@ -95,15 +95,13 @@ img {
   border-radius: 100px;
 }
 
-.btn:hover,
-:active {
+.btn:hover {
   background-color: #0ca678;
   color: #fff;
   text-transform: uppercase;
   text-decoration: none;
   font-weight: 500;
   display: inline-block;
-  border-radius: ;
 }
 
 .btn--big {
@@ -230,5 +228,9 @@ footer {
   box-shadow: 10px 20px 30px 0 rgba(0, 0, 0, 0.6);
 }
 
-ul {
+.FAQ {
+  color: blue;
+  font-size: 20px;
+  text-decoration: none;
+  margin-left: 20px;
 }
