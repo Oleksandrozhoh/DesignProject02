@@ -234,3 +234,8 @@ footer {
   text-decoration: none;
   margin-left: 20px;
 }
+
+.wip-links {
+  display: flex;
+  flex-direction: column;
+}
